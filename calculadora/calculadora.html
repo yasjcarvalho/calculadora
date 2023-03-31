@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalculadoraYasmin</title>
+    <link rel="stylesheet" href="./css/calculadora.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora</h1>
+    </header>
+    <main>
+      <div class="calculadora">
+        <div class="calculadorasimples">
+          <input type="number" id="num1" />
+          <input type="number" id="num2" />
+
+          <input type="button" value="+" id="somar" onclick="calcularSomar()" />
+          <input
+            type="button"
+            value="-"
+            id="subtrair"
+            onclick="calcularSubtracao()"
+          />
+          <input
+            type="button"
+            value="/"
+            id="dividir"
+            onclick="calcularDividir()"
+          />
+          <input
+            type="button"
+            value="*"
+            id="mutiplicar"
+            onclick="calcularMultiplicar()"
+          />
+
+          <input
+            type="button"
+            value="==="
+            id="comparar"
+            onclick="calcularComparar()"
+          />
+          <input
+            type="button"
+            value="^"
+            id="exponenciacao"
+            onclick="calcularExpoente()"
+          />
+        </div>
+
+        <div calculadora2>
+          <input type="number" id="num3" />
+          <input
+            type="button"
+            value="!"
+            id="fatorial"
+            onclick="calcularFatorial()"
+          />
+          <input
+            type="button"
+            value="√"
+            id="raizQuadrada"
+            onclick="calcularRaiz()"
+          />
+          <input
+            type="button"
+            value="pri"
+            id="primo"
+            onclick="calcularPrimo()"
+          />
+          <input type="button" value="par" id="par" onclick="calcularPar()" />
+          <input
+            type="button"
+            value="imp"
+            id="impar"
+            onclick="calcularImpar()"
+          />
+        </div>
+        <div>
+          <label for="result">Resultado:</label>
+          <output name="result" id="resultado"></output>
+        </div>
+      </div>
+
+      <script src="./js/calculadora.js"></script>
+    </main>
+
+    <footer>Feita por Yasmin Carvalho</footer>
+  </body>
+</html>
