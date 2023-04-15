@@ -85,14 +85,20 @@ const calcularRaiz = () => {
 
 const primo = a => {
   if (a < 2) {
-    return 'não é primo' // números menores que 2 não são considerados primos
+    return false
   }
-  for (let i = 2; i < a; i++) {
+  if (a === 2) {
+    return true
+  }
+  if (a % 2 === 0) {
+    return false
+  }
+  for (let i = 3; i <= Math.sqrt(a); i += 2) {
     if (a % i === 0) {
-      return 'não é primo'
+      return false
     }
   }
-  return 'é primo'
+  return true
 }
 
 const calcularPrimo = () => {
@@ -127,15 +133,16 @@ const calcularImpar = () => {
   document.getElementById('resultado').textContent = resultado
 }
 
-module.export =
-  (somar,
+module.exports = {
+  somar,
   subtrair,
   dividir,
   mutiplicar,
   primo,
   par,
-  impar,
+  eimpar,
   comparar,
   fatorial,
   raizQuadrada,
-  exponenciacao)
+  exponenciacao
+}

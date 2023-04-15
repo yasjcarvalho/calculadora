@@ -5,11 +5,12 @@ const {
   mutiplicar,
   primo,
   par,
-  impar,
+  eimpar,
   fatorial,
   raizQuadrada,
   exponenciacao
 } = require('./calculadora.js')
+
 var assert = require('assert')
 
 //testando a sum
@@ -25,7 +26,7 @@ assert(somar(5, -5) == 0, 'a soma de 5+(-5) é igual a 0')
 //testando a subtração
 assert(subtrair(5, 3) == 2, 'a subtração de 5-3 é igual a 2')
 assert(subtrair(0, -4) == 4, 'a subtração de 0-(-4) é igual a 4')
-assert(subtrair(0.5, 1.5) == 1, 'a subtração de 0.5-1.5 é igual a 1')
+assert(subtrair(0.5, 1.5) == -1, 'a subtração de 0.5-1.5 é igual a -1')
 assert(subtrair(-5, 5) == -10, 'a subtração de -5-5 é igual a -10')
 
 //testando a divisão
@@ -41,6 +42,8 @@ assert(mutiplicar(1.5, 2) == 3, 'a multiplicação de 1.5 x 2 é 3')
 assert(mutiplicar(-2, 5) == -10, 'a multiplicação de -2 x 5 é -10')
 
 //testando se é um número primo
+assert(primo(2) == 'Sim', 'o número 2 é primo')
+
 assert(primo(7) == 'Sim', 'o número 7 é primo')
 assert(primo(15) == 'Não', 'o número 15 não é primo')
 assert(primo(-7) == 'Não', 'o número -7 não é primo')
@@ -56,12 +59,12 @@ assert(par(0) == 'Sim', 'o número 0 é par')
 assert(par(1) == 'Não', 'o número 1 NÃO é par')
 
 //testando se é ímpar
-assert(impar(5) == 'Sim', 'o número 5 é ímpar')
-assert(impar(8) == 'Não', 'o número 8 NÃO é ímpar')
-assert(impar(-15) == 'Sim', 'o número 15 é ímpar')
-assert(impar(-2) == 'Não', 'o número -2 NÃO é ímpar')
-assert(impar(0) == 'Não', 'o número 0 NÃO é ímpar')
-assert(impar(1) == 'Sim', 'o número 1 é ímpar')
+assert(eimpar(5) == 'Sim', 'o número 5 é ímpar')
+assert(eimpar(8) == 'Não', 'o número 8 NÃO é ímpar')
+assert(eimpar(-15) == 'Sim', 'o número 15 é ímpar')
+assert(eimpar(-2) == 'Não', 'o número -2 NÃO é ímpar')
+assert(eimpar(0) == 'Não', 'o número 0 NÃO é ímpar')
+assert(eimpar(1) == 'Sim', 'o número 1 é ímpar')
 
 //testando o fatorial
 assert(fatorial(5) == 120, 'o fatorial de 5 é 120')
