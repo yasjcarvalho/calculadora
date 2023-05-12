@@ -23,4 +23,20 @@ describe('testando função subtração', () => {
     cy.get('#subtrair').click()
     cy.get('#resultado').should('have.text', '0')
   })
+
+  it('subtração de -150 -10', () => {
+    cy.get('#num1').type('-150')
+    cy.get('#num2').type('10')
+    cy.get('#subtrair').click()
+    cy.get('#resultado').should('have.text', '-160')
+  })
+
+  it('subtração de -30 -40', () => {
+    cy.get('#num1').type('-30')
+    cy.get('#num2').type('40')
+    cy.get('#subtrair').click()
+    cy.get('#resultado').should('have.text', '-70')
+  })
+
+
 })
