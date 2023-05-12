@@ -133,16 +133,16 @@ const calcularImpar = () => {
   document.getElementById('resultado').textContent = resultado
 }
 
-module.exports = {
-  somar,
-  subtrair,
-  dividir,
-  mutiplicar,
-  primo,
-  par,
-  eimpar,
-  comparar,
-  fatorial,
-  raizQuadrada,
-  exponenciacao
-}
+// module export default {
+//   somar,
+//   subtrair,
+//   dividir,
+//   mutiplicar,
+//   primo,
+//   par,
+//   eimpar,
+//   comparar,
+//   fatorial,
+//   raizQuadrada,
+//   exponenciacao
+// }
