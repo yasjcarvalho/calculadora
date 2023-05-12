@@ -1,7 +1,5 @@
 //<reference types="cypress" />
 
-
-
 describe('testando função soma', () => {
   beforeEach(() => {
     cy.visit('http://127.0.0.1:5500/calculadora/calculadora.html')
@@ -60,5 +58,12 @@ describe('testando função divisão', () => {
     cy.get('#num2').type('22')
     cy.get('#dividir').click()
     cy.get('#resultado').should('have.text', '1.8181818181818181')
+  })
+
+  it('divisão de 1 / 0', () => {
+    cy.get('#num1').type('1')
+    cy.get('#num2').type('0')
+    cy.get('#dividir').click()
+    cy.get('#resultado').should('have.text', 'Error')
   })
 })

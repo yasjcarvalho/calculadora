@@ -19,8 +19,12 @@ const calcularSubtracao = () => {
 }
 
 const dividir = (a, b) => {
+  if (b === 0) {
+    return 'Error'
+  }
   return a / b
 }
+
 const calcularDividir = () => {
   const num1 = Number(document.getElementById('num1').value)
   const num2 = Number(document.getElementById('num2').value)
