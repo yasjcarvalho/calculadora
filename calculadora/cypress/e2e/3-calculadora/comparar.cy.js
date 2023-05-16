@@ -26,9 +26,9 @@ describe('testando função comparar', () => {
 
   it('comparar de -7 e -8', () => {
     cy.get('#num1').type('-7')
-    cy.get('#num2').type('-7')
+    cy.get('#num2').type('-8')
     cy.get('#comparar').click()
-    cy.get('#resultado').should('have.text', 'menor')
+    cy.get('#resultado').should('have.text', 'maior')
   })
 
   it('comparar de -30 e -30', () => {
