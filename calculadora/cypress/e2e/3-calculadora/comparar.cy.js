@@ -32,9 +32,9 @@ describe('testando função comparar', () => {
   })
 
   it('comparar de -30 e -30', () => {
-    cy.get('#num1').type('-30')
-    cy.get('#num2').type('-30')
+    cy.get('#num1').should('not.be.disabled').type('-30')
+    cy.get('#num2').should('not.be.disabled').type('-30')
     cy.get('#comparar').click()
     cy.get('#resultado').should('have.text', 'igual')
-  })
+  }) //você pode verificar se o elemento está habilitado antes de realizar a ação de digitar.
 })
